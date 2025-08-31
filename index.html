@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Maze Game (HTML/CSS/JS)</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Maze Game</h1>
+    <div class="controls">
+      <label>Width
+        <input type="number" id="widthInput" min="5" max="100" value="25">
+      </label>
+      <label>Height
+        <input type="number" id="heightInput" min="5" max="100" value="18">
+      </label>
+      <button id="generateBtn">New Maze</button>
+      <button id="solveBtn" title="Toggle shortest path hint">Show Solution</button>
+      <button id="resetBtn">Reset Player</button>
+    </div>
+    <div class="stats">
+      <span id="timeStat">Time: 0.0s</span>
+      <span id="movesStat">Moves: 0</span>
+    </div>
+  </header>
+
+  <main>
+    <div id="canvasWrapper">
+      <canvas id="mazeCanvas" width="800" height="600" aria-label="Maze game area"></canvas>
+      <div id="touchOverlay" aria-hidden="true">
+        <button data-dir="up" class="dpad up">▲</button>
+        <button data-dir="left" class="dpad left">◀</button>
+        <button data-dir="down" class="dpad down">▼</button>
+        <button data-dir="right" class="dpad right">▶</button>
+      </div>
+    </div>
+    <section class="help">
+      <details open>
+        <summary>How to Play</summary>
+        <ul>
+          <li>Use Arrow Keys or WASD to move the green player square from start (top-left) to goal (bottom-right).</li>
+          <li>Press "Show Solution" to toggle the shortest path hint.</li>
+          <li>"Reset Player" keeps the maze but returns you to the start.</li>
+          <li>Create a new maze with custom width/height and press "New Maze".</li>
+          <li>Timer starts when you first move.</li>
+        </ul>
+      </details>
+    </section>
+  </main>
+
+  <footer>
+    <small>Pure HTML/CSS/JS Maze Game Demo</small>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
