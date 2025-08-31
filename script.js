@@ -1,5 +1,5 @@
 // Maze Game Implementation
-// Author: Simple HTML/CSS/JS Example
+// Author: KRIVANJA
 (() => {
   const canvas = document.getElementById('mazeCanvas');
   const ctx = canvas.getContext('2d');
